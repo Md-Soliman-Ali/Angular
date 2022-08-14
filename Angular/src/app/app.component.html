@@ -1,0 +1,14 @@
+<!-- Data Binding (Interpolation) => {{}} -->
+<h2> {{pageTitle}} </h2>
+
+<!-- Data Binding (Property Binding) => [] -->
+<img [src]="imageUrl" height="50px" width="50px">
+
+<!-- Data Binding (Event Binding) => () -->
+<br>
+<button (click)="hello()">Click Me</button>
+
+<!-- Data Binding (Two-Way Binding) => [()] -->
+<br> <br>
+<input type="text" [(ngModel)]="userName">
+<h3>Welcome To {{userName}}</h3>
