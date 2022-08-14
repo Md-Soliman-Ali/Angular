@@ -69,5 +69,11 @@ body {
 Create Component
 ----------------
 ``
-ng generate component --skip-tests=true header
+ng generate component --skip-tests=true component_name
+``
+
+Create Service
+--------------
+``
+ng g s services/contact
 ``
