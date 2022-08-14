@@ -54,7 +54,7 @@ cdnjs.com/libraries/font-awesome
 
 Configure CSS & Fontawesome > angular.json
 ------------------------------------------
-"styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css", "node_modules/@fortawesome/fontawesome/css/all.css", "src/styles.css"]
+"styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css", "node_modules/@fortawesome/fontawesome-free/css/all.css", "src/styles.css"]
 
 "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.js"]
 
