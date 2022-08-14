@@ -46,6 +46,15 @@ Install Bootstrap/FontAwesome
 npm install bootstrap @fortawesome/fontawesome-free
 ``
 
+Copy Link Tag CDN > Index.html
+------------------------------
+``
+cdnjs.com/libraries/font-awesome
+``
+
+Configure CSS & Fontawesome > angular.json
+------------------------------------------
+
 Create Component
 ----------------
 ``
