@@ -58,6 +58,14 @@ Configure CSS & Fontawesome > angular.json
 
 "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.js"]
 
+Configure Google Fonts > styles.css
+-----------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+body {
+    font-family: 'Fredoka', sans-serif;
+}
+
 Create Component
 ----------------
 ``
