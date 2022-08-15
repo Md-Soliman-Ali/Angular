@@ -88,3 +88,12 @@ npm init -y
 npm install
 ``
 
+Install BackEnd Json Server
+---------------------------
+``
+npm init -y
+``
+
+``
+npm install json-server
+``
