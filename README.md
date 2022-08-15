@@ -43,7 +43,7 @@ ng serve -o
 Install Bootstrap/FontAwesome
 -----------------------------
 ``
-npm install bootstrap @fortawesome/fontawesome-free
+npm install bootstrap @popperjs/core @fortawesome/fontawesome-free
 ``
 
 Copy Link Tag CDN > Index.html
