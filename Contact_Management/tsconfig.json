@@ -9,6 +9,8 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
+    /* Property '...' has no initializer and is not definitely assigned in the constructor. */
+    "strictPropertyInitialization":false,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
