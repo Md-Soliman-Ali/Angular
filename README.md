@@ -77,3 +77,9 @@ Create Service
 ``
 ng g s services/contact
 ``
+
+Node Packages Installed
+-----------------------
+``
+npm install
+``
