@@ -88,3 +88,22 @@ npm init -y
 npm install
 ``
 
+Install BackEnd Json Server
+---------------------------
+``
+npm init -y
+``
+
+``
+npm install json-server
+``
+
+Run DB.Json > server -> package.json 
+------------------------------------
+``
+"start": "json-server --watch db.json -p 4000"
+``
+
+``
+npm start
+``
