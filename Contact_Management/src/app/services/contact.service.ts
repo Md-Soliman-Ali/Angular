@@ -30,6 +30,18 @@ export class ContactService {
     return this.http.post<MyContact>(dataUrl, contact).pipe(catchError(this.handleError))
   }
 
+  // Update User
+  public updateUser(contact: MyContact, contactID: string): Observable<MyContact> {
+    let dataUrl: string = `${this.baseUrl}/icab_blood_official/${contactID}`;
+    return this.http.put<MyContact>(dataUrl, contact).pipe(catchError(this.handleError))
+  }
+
+  // Delete User
+  public deleteUser(contactID: string): Observable<MyContact> {
+    let dataUrl: string = `${this.baseUrl}/icab_blood_official/${contactID}`;
+    return this.http.delete<MyContact>(dataUrl).pipe(catchError(this.handleError))
+  }
+
   // Error Solve
   public handleError(error: HttpErrorResponse) {
     let errorMessage: string = ''
