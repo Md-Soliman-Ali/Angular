@@ -1,0 +1,29 @@
+{
+  "ICAB_Blood_Management": [{
+      "id": "BD01",
+      "photo": "assets/avatar.png",
+      "name": "Md. Soliman Ali",
+      "designation": "Software Engnieer in Test (QA)",
+      "gender": "Male",
+      "age": "25",
+      "mobile_no": "01706994692",
+      "blood_group": "A+",
+      "email": "solimanali.info@gmail.com",
+      "required_date": "08/15/2022 08:17 PM",
+      "address": "Dhaka, Bangladesh"
+    },
+    {
+      "id": "BD02",
+      "photo": "assets/avatar.png",
+      "name": "Abhi Mishra",
+      "designation": "Network Engnieer",
+      "gender": "Male",
+      "age": "30",
+      "mobile_no": "01303493155",
+      "blood_group": "AB+",
+      "email": "abhi@gmail.com",
+      "required_date": "02/03/2022 08:17 PM",
+      "address": "Dhaka, Bangladesh"
+    }
+  ]
+}
