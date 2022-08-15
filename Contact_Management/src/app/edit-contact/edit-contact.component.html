@@ -1,1 +1,70 @@
-<p>edit-contact works!</p>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col text-center">
+      <p class="h3 fw-bold text-dark"> <i class="fa fa-pen">&nbsp;</i> EDIT USER INFORMATION</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Edit User Form-->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-4">
+      <form>
+        <div class="mb-2">
+          <input type="text" class="form-control" placeholder="Name">
+        </div>
+        <div class="mb-2">
+          <input type="file" class="form-control" placeholder="Upload Photo" id="img" accept="image/*">
+        </div>
+        <div class="mb-2">
+          <input type="text" class="form-control" placeholder="Designation">
+        </div>
+        <div class="mb-2">
+          <select class="form-select">
+            <option selected>Gender</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <input type="number" class="form-control" placeholder="Age">
+        </div>
+        <div class="mb-2">
+          <input type="number" class="form-control" placeholder="Mobile Number">
+        </div>
+        <div class="mb-2">
+          <select class="form-select">
+            <option selected>Select Blood Group</option>
+            <option value="1">AB+</option>
+            <option value="2">AB-</option>
+            <option value="3">A+</option>
+            <option value="4">A-</option>
+            <option value="5">B+</option>
+            <option value="6">B-</option>
+            <option value="7">O+</option>
+            <option value="8">O-</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <input type="text" class="form-control" placeholder="Email">
+        </div>
+        <div class="mb-2">
+          <input type="datetime-local" class="form-control" placeholder="Till Required Date">
+        </div>
+        <div class="mb-2">
+          <input type="text" class="form-control" placeholder="Address">
+        </div>
+        <div class="mb-2 text-center">
+          <input type="submit" class="btn btn-primary" value="Update">
+          <a routerLink="/" class="btn btn-warning ms-2">Close</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-sm-4">
+      <img src="assets/avatar.png" alt="" class="add-contact-img">
+    </div>
+  </div>
+</div>

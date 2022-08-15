@@ -7,11 +7,11 @@ import { ViewContactComponent } from './view-contact/view-contact.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/blood/admin', pathMatch: 'full' },
-  { path: 'blood/admin', component: ContactManagerComponent },
-  { path: 'blood/add', component: AddContactComponent },
-  { path: 'user/edit/:contactID', component: EditContactComponent },
-  { path: 'user/view/:contactID', component: ViewContactComponent },
+  { path: '', redirectTo: '/blood/official', pathMatch: 'full' },
+  { path: 'blood/official', component: ContactManagerComponent },
+  { path: 'official/user/add', component: AddContactComponent },
+  { path: 'official/user/edit/:contactID', component: EditContactComponent },
+  { path: 'official/user/view/:contactID', component: ViewContactComponent },
   { path: '**', component: ErrorPageComponent }
 ];
 

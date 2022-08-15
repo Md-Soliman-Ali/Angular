@@ -1,1 +1,73 @@
-<p>contact-manager works!</p>
+<nav class="navbar navbar-dark" style="background-color: #F7E4D4">
+
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col">
+        <p class="h4">USER ADD <a href="btn btn-success btn-sm" href="official/user/add"><i
+              class="fa fa-plus-circle">&nbsp;</i></a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+    </div>
+    <div class="col-md-5">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </div>
+  </div>
+
+</nav>
+
+
+<!-- Card Design-->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="card list-group-item-success">
+        <div class="card-body">
+          <div class="row align-item-center">
+            <div class="col-sm-3">
+              <img src="assets/avatar.png" alt="user" class="contact-img">
+            </div>
+            <div class="col-sm-8">
+              <ul class="list-group mt-1">
+                <li class="list-group-item">Name: <span class="fw-bold">Md. Soliman Ali</span></li>
+              </ul>
+              <ul class="list-group mt-1">
+                <li class="list-group-item">Designation: <span class="fw-bold">Software Engnieer in Test (QA)</span>
+                </li>
+              </ul>
+              <ul class="list-group mt-1">
+                <li class="list-group-item">Gender: <span class="fw-bold">Male</span></li>
+              </ul>
+              <ul class="list-group mt-1">
+                <li class="list-group-item">Age: <span class="fw-bold">25</span></li>
+              </ul>
+              <ul class="list-group mt-1">
+                <li class="list-group-item">Mobile Number: <span class="fw-bold">01706994692</span></li>
+              </ul>
+              <ul class="list-group mt-1">
+                <li class="list-group-item">Select Blood Group: <span class="fw-bold">A+</span></li>
+              </ul>
+              <ul class="list-group mt-1">
+                <li class="list-group-item">Email: <span class="fw-bold">solimanali.info@gmail.com</span></li>
+              </ul>
+              <ul class="list-group mt-1">
+                <li class="list-group-item">Till Required Date: <span class="fw-bold"> </span></li>
+              </ul>
+              <ul class="list-group mt-1">
+                <li class="list-group-item">Address: <span class="fw-bold">Dhaka, Bangladesh</span></li>
+              </ul>
+            </div>
+            <div class="col-sm-1 d-flex flex-column justify-content-center align-items-center">
+              <a routerLink="/official/user/view/:contactID" class="btn btn-warning my-1"> <i class="fa fa-eye"></i></a>
+              <a routerLink="/official/user/edit/:contactID" class="btn btn-success my-1"> <i class="fa fa-pen"></i></a>
+              <button class="btn btn-danger my-1"> <i class="fa fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
