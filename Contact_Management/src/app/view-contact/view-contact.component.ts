@@ -13,7 +13,7 @@ export class ViewContactComponent implements OnInit {
   public contactID: string | null = null;
   public loading: boolean = false;
   public contact: MyContact = {} as MyContact;
-  public errorMessage: null;
+  public errorMessage: string | null = null;
 
   constructor(private activatedRoute: ActivatedRoute, private contService: ContactService) { }
 
