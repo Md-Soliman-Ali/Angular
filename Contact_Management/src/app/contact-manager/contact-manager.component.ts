@@ -17,7 +17,8 @@ export class ContactManagerComponent implements OnInit {
 
   ngOnInit(): void {
     this.loading = true;
-    this.cantService.getAllUser().subscribe((data: MyContact[]) => {
+    // data:MyContact[]
+    this.cantService.getAllUser().subscribe((data: any) => {
       this.contacts = data;
       this.loading = false;
     }, (error) => {
