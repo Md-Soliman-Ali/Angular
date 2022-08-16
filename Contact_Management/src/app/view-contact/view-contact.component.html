@@ -6,46 +6,71 @@
   </div>
 </div>
 
+<!-- Condition Based Spinner And Error Message -->
+
+<!-- Condition Based Loading -->
+<div *ngIf="loading">
+  <app-spinner></app-spinner>
+</div>
+
+<!-- Display Error Messages -->
+<div *ngIf="!loading && errorMessage">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="h4 text-danger fw-bold">{{errorMessage}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- View User Information -->
 
-<div class="container mt-5">
+<div *ngIf="!loading && isNotEmpty()" class="container mt-5">
   <div class="row align-items-center">
     <div class="col-sm-3">
-      <img src="assets/avatar.png" alt="" class="add-contact-img">
+      <img [src]="contact.photo" alt="" class="add-contact-img">
     </div>
     <div class="col-sm-6">
       <ul class="list-group mt-1">
-        <li class="list-group-item list-group-item-success">Name: <span class="fw-bold">Md. Soliman Ali</span></li>
+        <li class="list-group-item list-group-item-success">Name: <span class="fw-bold">{{contact.name}}</span></li>
       </ul>
       <ul class="list-group mt-1">
-        <li class="list-group-item list-group-item-success">Designation: <span class="fw-bold">Software Engnieer in Test
-            (QA)</span>
+        <li class="list-group-item list-group-item-success">Designation: <span
+            class="fw-bold">{{contact.designation}}</span>
         </li>
       </ul>
       <ul class="list-group mt-1">
-        <li class="list-group-item list-group-item-success">Gender: <span class="fw-bold">Male</span></li>
+        <li class="list-group-item list-group-item-success">Gender: <span class="fw-bold">{{contact.gender}}</span></li>
       </ul>
       <ul class="list-group mt-1">
-        <li class="list-group-item list-group-item-success">Age: <span class="fw-bold">25</span></li>
+        <li class="list-group-item list-group-item-success">Age: <span class="fw-bold">{{contact.age}}</span></li>
       </ul>
       <ul class="list-group mt-1">
-        <li class="list-group-item list-group-item-success">Mobile Number: <span class="fw-bold">01706994692</span></li>
+        <li class="list-group-item list-group-item-success">Mobile Number: <span
+            class="fw-bold">{{contact.mobile_no}}</span></li>
       </ul>
       <ul class="list-group mt-1">
-        <li class="list-group-item list-group-item-success">Select Blood Group: <span class="fw-bold">A+</span></li>
+        <li class="list-group-item list-group-item-success">Select Blood Group: <span
+            class="fw-bold">{{contact.blood_group}}</span></li>
       </ul>
       <ul class="list-group mt-1">
-        <li class="list-group-item list-group-item-success">Email: <span
-            class="fw-bold">solimanali.info@gmail.com</span></li>
+        <li class="list-group-item list-group-item-success">Email: <span class="fw-bold">{{contact.email}}</span></li>
       </ul>
       <ul class="list-group mt-1">
-        <li class="list-group-item list-group-item-success">Till Required Date: <span class="fw-bold"> </span></li>
+        <li class="list-group-item list-group-item-success">Till Required Date: <span
+            class="fw-bold">{{contact.required_date}}</span></li>
       </ul>
       <ul class="list-group mt-1">
-        <li class="list-group-item list-group-item-success">Address: <span class="fw-bold">Dhaka, Bangladesh</span></li>
+        <li class="list-group-item list-group-item-success">Address: <span class="fw-bold">{{contact.address}}</span>
+        </li>
       </ul>
     </div>
   </div>
+
+  <!-- <pre>{{contactID}}</pre> -->
+  <!-- <pre>{{contact | json}}</pre> -->
+
   <div class="row text-center mt-4">
     <div class="col">
       <a routerLink="/" class="btn btn-warning"> <i class="fa fa-arrow-alt-circle-left">&nbsp;</i> Go Back</a>

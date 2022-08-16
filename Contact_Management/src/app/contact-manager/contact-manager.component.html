@@ -19,6 +19,22 @@
 
 </nav>
 
+<!-- Condition Based Loading -->
+<div *ngIf="loading">
+  <app-spinner></app-spinner>
+</div>
+
+<!-- Display Error Messages -->
+<div *ngIf="!loading && errorMessage">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="h4 text-danger fw-bold">{{errorMessage}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- <pre>{{contacts | json}}</pre> -->
 
 <!-- Card Design-->
@@ -49,21 +65,25 @@
                 <li class="list-group-item">Mobile Number: <span class="fw-bold">{{contact.mobile_no}}</span></li>
               </ul>
               <ul class="list-group mt-1">
-                <li class="list-group-item">Select Blood Group: <span class="fw-bold">{{contact.blood_group}}</span></li>
+                <li class="list-group-item">Select Blood Group: <span class="fw-bold">{{contact.blood_group}}</span>
+                </li>
               </ul>
               <ul class="list-group mt-1">
                 <li class="list-group-item">Email: <span class="fw-bold">{{contact.email}}</span></li>
               </ul>
               <ul class="list-group mt-1">
-                <li class="list-group-item">Till Required Date: <span class="fw-bold">{{contact.required_date}}</span></li>
+                <li class="list-group-item">Till Required Date: <span class="fw-bold">{{contact.required_date}}</span>
+                </li>
               </ul>
               <ul class="list-group mt-1">
                 <li class="list-group-item">Address: <span class="fw-bold">{{contact.address}}</span></li>
               </ul>
             </div>
             <div class="col-sm-1 d-flex flex-column justify-content-center align-items-center">
-              <a routerLink="/official/user/view/:contactID" class="btn btn-warning my-1"> <i class="fa fa-eye"></i></a>
-              <a routerLink="/official/user/edit/:contactID" class="btn btn-success my-1"> <i class="fa fa-pen"></i></a>
+              <a routerLink="/official/user/view/{{contact.id}}" class="btn btn-warning my-1"> <i
+                  class="fa fa-eye"></i></a>
+              <a routerLink="/official/user/edit/{{contact.id}}" class="btn btn-success my-1"> <i
+                  class="fa fa-pen"></i></a>
               <button class="btn btn-danger my-1"> <i class="fa fa-trash"></i></button>
             </div>
           </div>
