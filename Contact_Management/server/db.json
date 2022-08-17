@@ -1,12 +1,13 @@
 {
-  "icab_blood_official": [{
+  "icab_blood_official": [
+    {
       "id": "BD01",
       "photo": "assets/avatar.png",
       "name": "Md. Soliman Ali",
       "designation": "Software Engnieer in Test (QA)",
       "gender": "Male",
-      "age": "25",
-      "mobile_no": "01706994692",
+      "age": 25,
+      "mobile_no": 1706994692,
       "blood_group": "A+",
       "email": "solimanali.info@gmail.com",
       "required_date": "08/15/2022 08:17 PM",

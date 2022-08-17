@@ -40,7 +40,7 @@
 <!-- Card Design-->
 <div class="container mt-5" *ngIf="!loading && contacts.length>0">
   <div class="row">
-    <div class="col-md-7" *ngFor="let contact of contacts">
+    <div class="col-md-6" *ngFor="let contact of contacts">
       <div class="card list-group-item-success shadow-lg my-2">
         <div class="card-body">
           <div class="row align-item-center">
@@ -84,7 +84,7 @@
                   class="fa fa-eye"></i></a>
               <a routerLink="/official/user/edit/{{contact.id}}" class="btn btn-success my-1"> <i
                   class="fa fa-pen"></i></a>
-              <button class="btn btn-danger my-1"> <i class="fa fa-trash"></i></button>
+              <button class="btn btn-danger my-1" (click)="deleteUser(contact.id)"> <i class="fa fa-trash"></i></button>
             </div>
           </div>
         </div>

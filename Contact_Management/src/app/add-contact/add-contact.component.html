@@ -6,65 +6,102 @@
   </div>
 </div>
 
+<!-- Condition Based Loading -->
+<div *ngIf="loading">
+  <app-spinner></app-spinner>
+</div>
+
+<!-- Display Error Messages -->
+<div *ngIf="!loading && errorMessage">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="h4 text-danger fw-bold">{{errorMessage}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <pre>{{contact | json}}</pre> -->
 
 <!-- User Form-->
 <div class="container mt-5">
   <div class="row">
     <div class="col-sm-4">
-      <form>
+      <form (submit)="onSubmit()">
+
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="Name">
+          <input [(ngModel)]="contact.name" name="name" type="text" class="form-control" placeholder="Name" required>
         </div>
+
         <div class="mb-2">
-          <input type="file" class="form-control" placeholder="Upload Photo" id="img" accept="image/*">
+          <option class="fw-bold text-dark">Choose Profile Picture</option>
+          <input [(ngModel)]="contact.photo" name="photo" type="file" class="form-control" placeholder="Upload Photo"
+            id="img" accept="image/*">
         </div>
+
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="Designation">
+          <input [(ngModel)]="contact.designation" name="designation" type="text" class="form-control"
+            placeholder="Designation">
         </div>
+
         <div class="mb-2">
-          <select class="form-select">
-            <option selected>Gender</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
+          <option class="fw-bold text-dark">Select Gender</option>
+          <select [(ngModel)]="contact.gender" name="gender" class="form-select">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
           </select>
         </div>
+
         <div class="mb-2">
-          <input type="number" class="form-control" placeholder="Age">
+          <input [(ngModel)]="contact.age" name="age" type="number" class="form-control" placeholder="Age">
         </div>
+
         <div class="mb-2">
-          <input type="number" class="form-control" placeholder="Mobile Number">
+          <input [(ngModel)]="contact.mobile_no" name="mobile_no" type="number" class="form-control"
+            placeholder="Mobile Number" required>
         </div>
+
         <div class="mb-2">
-          <select class="form-select">
-            <option selected>Select Blood Group</option>
-            <option value="1">AB+</option>
-            <option value="2">AB-</option>
-            <option value="3">A+</option>
-            <option value="4">A-</option>
-            <option value="5">B+</option>
-            <option value="6">B-</option>
-            <option value="7">O+</option>
-            <option value="8">O-</option>
+          <option class="fw-bold text-dark">Select Blood Group</option>
+          <select [(ngModel)]="contact.blood_group" name="blood_group" class="form-select" required>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
           </select>
         </div>
+
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="Email">
+          <input [(ngModel)]="contact.email" name="email" type="text" class="form-control" placeholder="Email">
         </div>
+
         <div class="mb-2">
-          <input type="datetime-local" class="form-control" placeholder="Till Required Date">
+          <option class="fw-bold text-dark">Till Required Date</option>
+          <input [(ngModel)]="contact.required_date" name="required_date" type="datetime-local" class="form-control"
+            placeholder="Till Required Date" required>
         </div>
+
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="Address">
+          <input [(ngModel)]="contact.address" name="address" type="text" class="form-control" placeholder="Address"
+            required>
         </div>
+
         <div class="mb-2 text-center">
           <input type="submit" class="btn btn-success" value="Create">
           <a routerLink="/" class="btn btn-warning ms-2">Close</a>
         </div>
+
       </form>
     </div>
 
     <div class="col-sm-4">
-      <img src="assets/avatar.png" alt="" class="add-contact-img">
+      <img [src]="contact.photo" alt="" class="contact-img">
     </div>
   </div>
+
 </div>

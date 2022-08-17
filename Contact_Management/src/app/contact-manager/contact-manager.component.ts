@@ -16,6 +16,10 @@ export class ContactManagerComponent implements OnInit {
   constructor(private cantService: ContactService) { }
 
   ngOnInit(): void {
+    this.getAllUserData()
+  }
+
+  getAllUserData() {
     this.loading = true;
     // data:MyContact[]
     this.cantService.getAllUser().subscribe((data: any) => {
@@ -25,6 +29,17 @@ export class ContactManagerComponent implements OnInit {
       this.errorMessage = error;
       this.loading = false;
     })
+  }
+
+  deleteUser(contactID: string | undefined) {
+    if (contactID) {
+      this.cantService.deleteUser(contactID).subscribe((data: {}) => {
+        this.getAllUserData();
+      }, (error) => {
+        this.errorMessage = error;
+        this.loading = false;
+      })
+    }
   }
 }
 

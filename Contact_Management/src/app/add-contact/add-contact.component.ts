@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MyContact } from '../models/myContact';
+import { ContactService } from '../services/contact.service';
 
 @Component({
   selector: 'app-add-contact',
@@ -11,9 +13,20 @@ export class AddContactComponent implements OnInit {
   public contact: MyContact = {} as MyContact;
   public errorMessage: string | null = null;
 
-  constructor() { }
+  constructor(private contactService: ContactService, private router: Router) { }
 
   ngOnInit(): void {
+
   }
 
+  public onSubmit() {
+    this.contactService.createUser(this.contact).subscribe((data: MyContact) => {
+      this.router.navigate(['/']).then();
+    }, (error) => {
+      this.errorMessage = error;
+      this.router.navigate(['official/user/add']).then();
+    })
+  }
 }
+
+
