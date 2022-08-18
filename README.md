@@ -81,10 +81,6 @@ ng g s services/contact
 Node Packages Installed
 -----------------------
 ``
-npm init -y
-``
-
-``
 npm install
 ``
 
